@@ -13,6 +13,8 @@ class Card extends React.Component {
 	
 	render() {
 		const props = this.props;
+		const className = props.className;
+		const onClick = props.onClick;
 		const style = props.style;
 		let description = props.description;
 		
@@ -23,8 +25,10 @@ class Card extends React.Component {
 		return (
 			<div
 				id="card"
+				className={className}
 				style={style}
-				description={description}>
+				description={description}
+				onClick={onClick}>
 			{props.children}
 			</div>
 		)

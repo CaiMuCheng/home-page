@@ -26,12 +26,13 @@ function App() {
 				left: "0px",
 				bottom: "0px",
 				right: "0px",
-				margin: "auto"
+				margin: "auto",
+				overflow: "auto"
 			}}>
 			<AppMainCard />
 			</Card>
 			<div id="toastBar"/>
-			<Card zIndex="9999" style={{
+			<Card zIndex="1440" style={{
 				display: "flex",
 				position: 'absolute',
 				bottom: '0px',
