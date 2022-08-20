@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+String.prototype.trimMargin = function(joinText = '\n') {
+	return this.split('\n')
+		.map((value, index) => {
+			return value.trim();
+		})
+		.join(joinText);
+}
+
 class Card extends React.Component {
 	
 	render() {
@@ -9,12 +17,7 @@ class Card extends React.Component {
 		let description = props.description;
 		
 		if(description != null) {
-			description = description
-				.split('\n')
-				.map((value, index) => {
-					return value.trim();
-				})
-				.join('\n');
+			description = description.trimMargin();
 		}
 		
 		return (
